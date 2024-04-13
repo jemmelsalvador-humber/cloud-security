@@ -1,0 +1,17 @@
+---
+# tasks file for webserver
+- name: Install webserver
+  yum:
+    name: "{{package}}"
+    state: present
+- name: Copy website files
+  copy:
+    src: "website/"
+    dest: "{{target}}/"
+- name: Set file permissions
+  file:
+    path: "{{target}}"
+    owner: "{{file_owner}}"
+    mode: "{{file_permissions}}"
+    recurse: yes
+  notify: start_httpd

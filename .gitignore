@@ -37,8 +37,8 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# Ignore VSCode Workspace
-CCGC-5501.code-workspace
-
 # Ignore .terraform.lock.hcl files in all folders
 **/.terraform.lock.hcl
+
+# Ignore logs
+terraform_logs/

@@ -1,0 +1,6 @@
+---
+# vars file for webserver
+package: httpd
+target: /var/www/html
+file_owner: apache
+file_permissions: 0555

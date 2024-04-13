@@ -1,0 +1,4 @@
+- name: Main Playbook
+  hosts: "{{target_hosts}}"
+  roles:
+    - webserver

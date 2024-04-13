@@ -1,0 +1,11 @@
+[linux]
+web-vm1 ansible_host=web-vm1.canadacentral.cloudapp.azure.com
+web-vm2 ansible_host=web-vm2.canadacentral.cloudapp.azure.com
+web-vm3 ansible_host=web-vm3.canadacentral.cloudapp.azure.com
+
+[os:children]
+linux
+
+[linux:vars]
+ansible_user=n01235433
+ansible_ssh_private_key_file=~/id_rsa
